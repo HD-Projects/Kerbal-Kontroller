@@ -61,11 +61,11 @@ After we finnished the design we wanted to have a to scale model. we wanted some
 
 Front
 
-![Proped up](Images/front-Proped-up.jpg)
+![Proped up](Images/Front-proped-up.jpg)
 
 Side
 
-![Proped up](Images/side-Proped-up.jpg)
+![Proped up](Images/Side-proped-up.jpg)
 
 Proped up
 

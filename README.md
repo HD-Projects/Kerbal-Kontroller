@@ -45,7 +45,7 @@ These buttons and switches took up about 25 pins so they could fit easly on one 
 
 For our fist design we wanted to have a big board 30cm wide and 20cm tall, it was going to be huge! We kept adding on to this design and ended up with this design in this design we added 5 modable buttons for different buttons on the keyboard that the end user could change.
 
-![First Design](images/First-Design.jpg)
+![First Design](Images/First-Design.jpg)
 
 We worked on thsi design for a while and created 2 prototypes in [this folder](Design/v.1) or [this folder](Design/v.2) We found that this design was going to be way too big and changed over to our much smaller second design 
 
@@ -53,7 +53,7 @@ We worked on thsi design for a while and created 2 prototypes in [this folder](D
 
 On our second design we got rid of the huge time warp selector, although helpful used up too many pins and could be a lot smaller. for this design we designed the layout of the buttons and switches then chose the size of the plexiglass we wanted
 
-![Final Design](images/Final-Design.jpg)
+![Final Design](Images/Final-Design.jpg)
 
 This was a much smaller form factor and only have 22 buttons, 6 switches and one analog gauge, for a total of 28 digital pins, and only on analog pins. 
 
@@ -61,15 +61,15 @@ After we finnished the design we wanted to have a to scale model. we wanted some
 
 Front
 
-![Proped up](images/front-proped-up.jpg)
+![Proped up](Images/front-Proped-up.jpg)
 
 Side
 
-![Proped up](images/side-proped-up.jpg)
+![Proped up](Images/side-Proped-up.jpg)
 
 Proped up
 
-![Proped up](images/proped-up.jpg)
+![Proped up](Images/Proped-up.jpg)
 
 We found that this would be the perfect size for our kerbal controller.
 

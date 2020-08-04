@@ -61,15 +61,15 @@ After we finnished the design we wanted to have a to scale model. we wanted some
 
 Front
 
-![Proped up](images/Front-proped-up.jpg)
+![Proped up](images/front-proped-up.jpg)
 
 Side
 
-![Proped up](images/Side-proped-up.jpg)
+![Proped up](images/side-proped-up.jpg)
 
 Proped up
 
-![Proped up](images/Proped-up.jpg)
+![Proped up](images/proped-up.jpg)
 
 We found that this would be the perfect size for our kerbal controller.
 

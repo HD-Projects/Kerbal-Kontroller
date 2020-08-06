@@ -79,7 +79,7 @@ After doing some research on KSP mods for kerbal controllers we found this [post
 
 # Built-it-yourself
 
-**More info coming soon**
+Look at our [website](https://hdprojects.dev/ksp/diy)
 
 # File-system
 

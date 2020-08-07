@@ -79,7 +79,16 @@ After doing some research on KSP mods for kerbal controllers we found this [post
 
 # Built-it-yourself
 
+# Approach 1
 Look at our [website](https://hdprojects.dev/ksp/diy)
+
+# Approach 2
+
+* First consult the parts list to buy all the parts
+
+* Then get the faceplate cut and the keycaps 3d printed
+
+
 
 # File-system
 

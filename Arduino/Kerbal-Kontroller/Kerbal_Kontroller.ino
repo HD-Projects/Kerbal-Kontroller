@@ -19,15 +19,15 @@ settings if you are following our directions
 
 // SAS + RCS + Mod
 
-const int SAS_switch = 2;
-const int RCS_switch = 2; // The-Bit-One(Or ) will never have this switch on
-const int mod_switch = 2;
+#define SAS_switch 2;
+#define RCS_switch 2; // The-Bit-One(Or u/hogthardwarf) will never have this switch on
+#define mod_switch 2;
 
 // Built in Action Groups
 
-const int lights_switch = 2;
-const int brakes_switch = 2;
-const int gear_switch = 2;
+#define lights_switch 2;
+#define brakes_switch 2;
+#define gear_switch 2;
 
 /*
 
@@ -37,37 +37,37 @@ it for your controller
 
 */
 
-const int stage_button = 2;
+#define stage_button 2;
 
 // Controls
 
-const int roll_right_button = 2;
-const int roll_left_button = 2;
-const int pitch_left_button = 2;
-const int pitch_right_button = 2;
-const int yaw_up_button = 2;
-const int yaw_down_button = 2;
+#define roll_right_button 2;
+#define roll_left_button 2;
+#define pitch_left_button 2;
+#define pitch_right_button 2;
+#define yaw_up_button 2;
+#define yaw_down_button 2;
 
 // Warp button
 
-const int WTM_button = 2; // Warp to manuver
-const int warp_up_button = 2;
-const int warp_down_button = 2;
+#define WTM_button 2; // Warp to manuver
+#define warp_up_button 2;
+#define warp_down_button 2;
 
 // Quick Saves
 
-const int quick_save_button = 2;
-const int revert_quick_save_button = 2;
+#define quick_save_button 2;
+#define revert_quick_save_button 2;
 
 
 // Action Groups
 
-const int action_1_button = 2;
-const int action_2_button = 2;
-const int action_3_button = 2;
-const int action_4_button = 2;
-const int action_5_button = 2;
-const int action_6_button = 2;
+#define action_1_button 2;
+#define action_2_button 2;
+#define action_3_button 2;
+#define action_4_button 2;
+#define action_5_button 2;
+#define action_6_button 2;
 
 /* 
 
@@ -77,7 +77,7 @@ Analog Pins
 
 // Throttle
 
-const int throttle_gauge = 5;
+#define throttle_gauge ;
 
 // Done Setting Up Pins
 

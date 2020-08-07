@@ -9,7 +9,7 @@
 
 ## 3D-Printing
 
-* [9 Keys(3d-printing option)](3d-Print/9-keys.stl)
+* [9 Keys(3d-printing option)](3d-Print/9-keys.stl) or buy 22 keycaps
 * [Stage](3d-Print/Stage.stl)
 
 ## Electronics

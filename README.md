@@ -88,6 +88,8 @@ Look at our [website](https://hdprojects.dev/ksp/diy)
 
 * Then get the faceplate cut and the keycaps 3d printed
 
+* 
+
 
 
 # File-system

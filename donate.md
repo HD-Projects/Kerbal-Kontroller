@@ -1,6 +1,6 @@
 # Donations
 
-This is the place to donate if you want to support all our open source projects look at [our website](hdprojects.dev) to see and download all our chrome extensions, python apps, games and much more!
+This is the place to donate if you want to support all our open source projects look at [our website](https://hdprojects.dev) to see and download all our chrome extensions, python apps, games and much more!
 
 BTC (legacy)
 

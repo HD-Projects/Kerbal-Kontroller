@@ -101,7 +101,7 @@ Look at our [website](https://hdprojects.dev/ksp/diy)
 
 # File-system
 
-### CAD Section
+### CAD Section (design folder)
 
 This is split into three parts 
 
@@ -111,3 +111,16 @@ This is split into three parts
     * v.2 was the same design just we totally redid the CAD Model to fix the many errors we had before.
 * Final 
     * This is the only totally finnished design that would acctually work if you tried it.
+   
+### Glowforge (parts folder)
+
+* glowforge folder (holds stl files)
+
+* alternative folder (holds alternatives to using your own glowforge)
+   
+        
+# 3d printing (in design folder) 
+    
+  * stl files
+  
+  * alternative folder (holds alternatives to using your own printer)

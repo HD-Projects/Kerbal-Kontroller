@@ -5,6 +5,7 @@ This is a external controller for the game Kerbal Space Program you need a [Arte
 # Table of Contents
 
 * [Design](#design)
+* [Software](#software)
 * [Built it yourself](#Built-it-yourself)
 * [Files](#File-system)
 
@@ -77,7 +78,7 @@ We found that this would be the perfect size for our kerbal controller.
 
 After doing some research on KSP mods for kerbal controllers we found this [post](https://www.reddit.com/r/KerbalControllers/comments/ajavos/software_comparison_thread/) on the different ways to do it can after looing at the pros and cons of each of them we thought that Kerbal Simpit would be the best for cosntomizablity and ease of use.
 
-# Built-it-yourself
+# Build-it-yourself
 
 # Approach 1
 Look at our [website](https://hdprojects.dev/ksp/diy)
@@ -88,13 +89,19 @@ Look at our [website](https://hdprojects.dev/ksp/diy)
 
 * Then get the faceplate cut and the keycaps 3d printed
 
-* 
+* slot the keys+keycaps into ther respictive slots along with all the other parts
+
+* use wire and solder all the parts into the right  i/o pins (digital pins for everything)
+
+* download our code onto your aurdino
+
+* profit?
 
 
 
 # File-system
 
-### CAD Section
+### CAD Section (design folder)
 
 This is split into three parts 
 
@@ -104,3 +111,16 @@ This is split into three parts
     * v.2 was the same design just we totally redid the CAD Model to fix the many errors we had before.
 * Final 
     * This is the only totally finnished design that would acctually work if you tried it.
+   
+### Glowforge (parts folder)
+
+* glowforge folder (holds stl files)
+
+* alternative folder (holds alternatives to using your own glowforge)
+   
+        
+# 3d printing (in design folder) 
+    
+  * stl files
+  
+  * alternative folder (holds alternatives to using your own printer)

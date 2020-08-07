@@ -5,6 +5,7 @@ This is a external controller for the game Kerbal Space Program you need a [Arte
 # Table of Contents
 
 * [Design](#design)
+* [Software](#software)
 * [Built it yourself](#Built-it-yourself)
 * [Files](#File-system)
 

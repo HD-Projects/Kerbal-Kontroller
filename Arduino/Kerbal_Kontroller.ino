@@ -102,51 +102,53 @@ void setup() {
 
   // SAS + RCS + Mod
 
-  pinMode(SAS_switch, OUTPUT);
-  pinMode(RCS_switch, OUTPUT);
-  pinMode(mod_switch, OUTPUT);
+  pinMode(SAS_switch, INPUT);
+  pinMode(RCS_switch, INPUT);
+  pinMode(mod_switch, INPUT);
 
   // Built-in Action groups
 
-  pinMode(lights_switch, OUTPUT);
-  pinMode(brakes_switch, OUTPUT);
-  pinMode(gear_switch, OUTPUT);
+  pinMode(lights_switch, INPUT);
+  pinMode(brakes_switch, INPUT);
+  pinMode(gear_switch, INPUT);
 
   // Stage
 
-  pinMode(stage_button, OUTPUT);
+  pinMode(stage_button, INPUT);
 
   // Controls
 
-  pinMode(roll_right_button, OUTPUT);
-  pinMode(roll_left_button, OUTPUT);
-  pinMode(pitch_left_button, OUTPUT);
-  pinMode(pitch_right_button, OUTPUT);
-  pinMode(yaw_up_button, OUTPUT);
-  pinMode(yaw_down_button, OUTPUT);
+  pinMode(roll_right_button, INPUT);
+  pinMode(roll_left_button, INPUT);
+  pinMode(pitch_left_button, INPUT);
+  pinMode(pitch_right_button, INPUT);
+  pinMode(yaw_up_button, INPUT);
+  pinMode(yaw_down_button, INPUT);
 
   // Warp Buttons
 
-  pinMode(WTM_button, OUTPUT);
-  pinMode(warp_up_button, OUTPUT);
-  pinMode(warp_down_button, OUTPUT);
+  pinMode(WTM_button, INPUT);
+  pinMode(warp_up_button, INPUT);
+  pinMode(warp_down_button, INPUT);
 
   // Quick Saves
   
-  pinMode(quick_save_button, OUTPUT);
-  pinMode(revert_quick_save_button, OUTPUT);
+  pinMode(quick_save_button, INPUT);
+  pinMode(revert_quick_save_button, INPUT);
 
   // Action Groups
 
-  pinMode(action_1_button, OUTPUT);
-  pinMode(action_2_button, OUTPUT);
-  pinMode(action_3_button, OUTPUT);
-  pinMode(action_4_button, OUTPUT);
-  pinMode(action_5_button, OUTPUT);
-  pinMode(action_6_button, OUTPUT);
+  pinMode(action_1_button, INPUT);
+  pinMode(action_2_button, INPUT);
+  pinMode(action_3_button, INPUT);
+  pinMode(action_4_button, INPUT);
+  pinMode(action_5_button, INPUT);
+  pinMode(action_6_button, INPUT);
 
 }
 
 void loop() {
+
+
   mySimpit.update();
 }

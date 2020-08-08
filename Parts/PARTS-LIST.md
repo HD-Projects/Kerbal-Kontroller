@@ -16,7 +16,7 @@
 ## Electronics
 
 * [Artemis Board W/ 28+ Digital Pins](https://www.sparkfun.com/search/results?term=artemis) (24.95)
-* [22 Cherry MX keys](https://novelkeys.xyz/collections/switches/products/cherry-switches)  (10.50)
+* [22 Cherry MX keys](https://novelkeys.xyz/collections/switches/products/cherry-switches)  (21)
 * [Slide Potentiometer](https://www.sparkfun.com/products/9119) & [Knob](https://www.sparkfun.com/products/9120) (2.95) + (0.95)
 * [Toggle Switch and Cover](https://www.sparkfun.com/products/11310) (17.70)
 * [Some Hookup Wire](https://www.sparkfun.com/products/8024) (2.50)
@@ -30,3 +30,8 @@
 
 * [Plywood 1/4 in(1 Sheet)](https://www.homedepot.com/p/Sanded-Plywood-Common-15-32-in-x-2-ft-x-2-ft-Actual-0-451-in-x-23-75-in-x-23-75-in-300888/202093832) (7.98)
 * [Plexiglass 1/16"](https://www.amazon.com/transparente-policarbonato-resistente-plexigl%C3%A1s-manualidades/dp/B07MQTDF4R/ref=psdc_11260350011_t1_B016PE9W1W) (9.99)
+
+
+Total Price
+
+(18.57) + (8.80) + (24.95) + (21) + (2.95) + (0.95) + (17.70) + (2.50) + (0.95) + (7.98) + (9.99) = 115.89 for a completed controller

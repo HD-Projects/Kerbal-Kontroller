@@ -18,7 +18,7 @@
 * [22 Cherry MX keys](https://novelkeys.xyz/collections/switches/products/cherry-switches)  (10.50)
 * [Slide Potentiometer](https://www.sparkfun.com/products/9119) & [Knob](https://www.sparkfun.com/products/9120) (2.95) + (0.95)
 * [Toggle Switch and Cover](https://www.sparkfun.com/products/11310) (17.70)
-* [Some Hookup Wire](hhttps://www.sparkfun.com/products/8024) (2.50)
+* [Some Hookup Wire](https://www.sparkfun.com/products/8024) (2.50)
 * [Resistors](https://www.sparkfun.com/products/14490) (0.95)
 
 ## Glowforge

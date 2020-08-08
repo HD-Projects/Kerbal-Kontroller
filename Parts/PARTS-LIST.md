@@ -9,8 +9,9 @@
 
 ## 3D-Printing
 
-* [9 Keys(3d-printing option)](3d-Print/9-keys.stl) or buy 22 keycaps
-* [Stage](3d-Print/Stage.stl)
+* [9 Keys(3d-printing option)](3d-Print/9-keys.stl) or buy 22 keycaps (18.57) from [3dhubs](https://www.3dhubs.com/) or (20.90) at [sparkfun](https://www.sparkfun.com/products/15305)
+
+* [Stage](3d-Print/Stage.stl)  (8.80) from [3dhubs](https://www.3dhubs.com/)
 
 ## Electronics
 

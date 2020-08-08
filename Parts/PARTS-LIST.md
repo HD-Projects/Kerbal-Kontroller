@@ -34,4 +34,4 @@
 
 Total Price
 
-(18.57) + (8.80) + (24.95) + (21) + (2.95) + (0.95) + (17.70) + (2.50) + (0.95) + (7.98) + (9.99) = **115.89** for a completed controller
+(18.57)keycaps + (8.80)stage btn + (24.95)aurdino + (21)keys + (2.95)slide pot + (0.95)slide pot knob + (17.70)toggle switch + (2.50)wire + (0.95)resistor + (7.98)plywood + (9.99)plexi = **115.89** for a completed controller

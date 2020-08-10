@@ -108,7 +108,7 @@ void setup() {
 
   // SAS + RCS + Mod
 
-  /*pinMode(SAS_switch, INPUT);
+  pinMode(SAS_switch, INPUT);
   pinMode(RCS_switch, INPUT);
   pinMode(mod_switch, INPUT);
 
@@ -116,7 +116,7 @@ void setup() {
 
   pinMode(lights_switch, INPUT);
   pinMode(brakes_switch, INPUT);
-  pinMode(gear_switch, INPUT);*/
+  pinMode(gear_switch, INPUT);
 
   // Stage
 
@@ -124,7 +124,7 @@ void setup() {
 
   // Controls
 
-  /*pinMode(roll_right_button, INPUT);
+  pinMode(roll_right_button, INPUT);
   pinMode(roll_left_button, INPUT);
   pinMode(pitch_left_button, INPUT);
   pinMode(pitch_right_button, INPUT);
@@ -149,7 +149,7 @@ void setup() {
   pinMode(action_3_button, INPUT);
   pinMode(action_4_button, INPUT);
   pinMode(action_5_button, INPUT);
-  pinMode(action_6_button, INPUT);*/
+  pinMode(action_6_button, INPUT);
 }
 
 void loop() {

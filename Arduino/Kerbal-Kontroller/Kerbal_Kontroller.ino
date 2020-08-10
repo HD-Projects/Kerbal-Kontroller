@@ -154,7 +154,13 @@ void setup() {
 
 void loop() {
   // Debounce
-
+/* 1 */int brakesDigitalRead = digitalRead(gear_switch); // getting status of brakes switch we are using an integer variable but only two values are 
+// possible "HIGH" meaning true or activate and and "LOW" meaning false
+/* 2 */int lightDigitialRead = digitalRead(lights_switch)
+/* 3 */int gearDigitalRead = digitalRead(gear_switch)
+/* 4 */int sasDigitalRead = digitalRead(SAS_switch)
+/* 5 */int rcsDigitalRead = digitalRead(RCS_switch)
+/* 6 */int modDigitalRead = digitalRead(mod_switch)
   button_state = digitalRead(stage_button);
 
   if(button_state == HIGH){
@@ -164,6 +170,59 @@ void loop() {
       mySimpit.activateAction(STAGE_ACTION);
     }
   }
+  
+
+
+if(brakesDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(BRAKES_ACTION); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(BRAKES_ACTION);  //activating brakes
+}
+if(lightDigitialRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(LIGHT_ACTION); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(LIGHT_ACTION);  //activating brakes
+}
+if(gearDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(GEAR_ACTION); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(GEAR_ACTION );  //activating brakes
+}
+
+if(sasDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(SAS_ACTION); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(SAS_ACTION );  //activating brakes
+}
+
+if(rcsDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(RCS_ACTION); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(RCS_ACTION);  //activating brakes
+}
+
+
+//!!!!!!!!!!!!!!!!
+//IMPORTANT
+//Please insert your desired action in the /* Your action */ comment
+
+if(mod_switch == HIGH /* high is this case is erqual to a boolean 'true' */ ){
+  mySimpit.deactivateAction(/* Your action */); //deavtivating brakes
+}
+else /* checking if button is not active or "LOW" */ {
+  mySimpit.activateAction(/* Your action */);  //activating brakes
+}
+//IMPORTANT
+//!!!!!!!!!!!!!
+
+
+
+
 
   mySimpit.update();
 }

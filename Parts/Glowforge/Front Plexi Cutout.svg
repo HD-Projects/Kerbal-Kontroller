@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 282.70001 190"
-   width="282.70001mm"
+   viewBox="0 0 295.39999 190"
+   width="295.39999mm"
    height="190mm"
    version="1.1"
    id="svg1046"
-   sodipodi:docname="Front Plexi cutout.svg"
+   sodipodi:docname="Front Plexi Cutout.svg"
    inkscape:version="1.1-dev (0d0750e, 2020-08-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -29,14 +29,14 @@
      inkscape:window-height="1017"
      id="namedview1048"
      showgrid="false"
-     width="282.7mm"
+     width="295.4mm"
      scale-x="3.8"
      inkscape:document-units="mm"
      units="mm"
      inkscape:zoom="0.7429714"
-     inkscape:cx="505.65874"
-     inkscape:cy="388.84888"
-     inkscape:window-x="1912"
+     inkscape:cx="663.55179"
+     inkscape:cy="329.084"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g1042" />
@@ -136,7 +136,7 @@
     <g
        inkscape:label="0"
        id="g1614"
-       transform="matrix(0.26432407,0,0,0.2642147,6.4952655,-106.70034)"
+       transform="matrix(0.26432411,0,0,0.2642147,12.845264,-106.70034)"
        style="stroke-width:1.00276;stroke-miterlimit:4;stroke-dasharray:none">
       <path
          d="m 249.44882,498.89764 a 22.677165,22.677165 0 1 0 -45.35433,0 22.677165,22.677165 0 1 0 45.35433,0 z"
@@ -528,16 +528,9 @@
          id="path1612" />
     </g>
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect1744"
-       width="12.7"
-       height="190"
-       x="282.56769"
-       y="0.13229151" />
-    <rect
        style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1762"
-       width="282.435"
+       width="295.13501"
        height="189.735"
        x="0.1326831"
        y="0.13229151"

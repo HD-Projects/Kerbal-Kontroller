@@ -1,8 +1,8 @@
-#include <KerbalSimpit.h>
-#include <KerbalSimpitMessageTypes.h>
-#include <PayloadStructs.h>
+#include "KerbalSimpit.h"
+#include "KerbalSimpitMessageTypes.h"
+#include "PayloadStructs.h"
 
-/* 
+/*
 
 Varables to keep track of button state
 
@@ -12,7 +12,7 @@ int button_state = 0;
 
 /*
 
-Const switch setup we recomend the following 
+Const switch setup we recomend the following
 settings if you are following our directions
 
 */
@@ -31,8 +31,8 @@ settings if you are following our directions
 
 /*
 
-Const for button pin, we reccomend the 
-following settings but feel free to change 
+Const for button pin, we reccomend the
+following settings but feel free to change
 it for your controller
 
 */
@@ -69,7 +69,7 @@ it for your controller
 #define action_5_button 2;
 #define action_6_button 2;
 
-/* 
+/*
 
 Analog Pins
 
@@ -85,144 +85,144 @@ KerbalSimpit mySimpit(Serial);
 
 
 
-void simpitSetup(int pin){
-  Serial.begin(115200);
+void simpitSetup(int pin) {
+    Serial.begin(115200);
 
-  digitalWrite(pin, HIGH);
+    digitalWrite(pin, HIGH);
 
-  // This loop continually attempts to handshake with the plugin.
-  // It will keep retrying until it gets a successful handshake.
-  while (!mySimpit.init()) {
-    delay(100);
-  }
-  // Turn off the built-in LED to indicate handshaking is complete.
-  digitalWrite(pin, LOW);
+    // This loop continually attempts to handshake with the plugin.
+    // It will keep retrying until it gets a successful handshake.
+    while (!mySimpit.init()) {
+        delay(100);
+    }
+    // Turn off the built-in LED to indicate handshaking is complete.
+    digitalWrite(pin, LOW);
 }
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+    pinMode(LED_BUILTIN, OUTPUT);
 
-  simpitSetup(LED_BUILTIN);
+    simpitSetup(LED_BUILTIN);
 
-  // Start input setup
+    // Start input setup
 
-  // SAS + RCS + Mod
+    // SAS + RCS + Mod
 
-  pinMode(SAS_switch, INPUT);
-  pinMode(RCS_switch, INPUT);
-  pinMode(mod_switch, INPUT);
+    pinMode(SAS_switch, INPUT);
+    pinMode(RCS_switch, INPUT);
+    pinMode(mod_switch, INPUT);
 
-  // Built-in Action groups
+    // Built-in Action groups
 
-  pinMode(lights_switch, INPUT);
-  pinMode(brakes_switch, INPUT);
-  pinMode(gear_switch, INPUT);
+    pinMode(lights_switch, INPUT);
+    pinMode(brakes_switch, INPUT);
+    pinMode(gear_switch, INPUT);
 
-  // Stage
+    // Stage
 
-  pinMode(stage_button, INPUT);
+    pinMode(stage_button, INPUT);
 
-  // Controls
+    // Controls
 
-  pinMode(roll_right_button, INPUT);
-  pinMode(roll_left_button, INPUT);
-  pinMode(pitch_left_button, INPUT);
-  pinMode(pitch_right_button, INPUT);
-  pinMode(yaw_up_button, INPUT);
-  pinMode(yaw_down_button, INPUT);
+    pinMode(roll_right_button, INPUT);
+    pinMode(roll_left_button, INPUT);
+    pinMode(pitch_left_button, INPUT);
+    pinMode(pitch_right_button, INPUT);
+    pinMode(yaw_up_button, INPUT);
+    pinMode(yaw_down_button, INPUT);
 
-  // Warp Buttons
+    // Warp Buttons
 
-  pinMode(WTM_button, INPUT);
-  pinMode(warp_up_button, INPUT);
-  pinMode(warp_down_button, INPUT);
+    pinMode(WTM_button, INPUT);
+    pinMode(warp_up_button, INPUT);
+    pinMode(warp_down_button, INPUT);
 
-  // Quick Saves
-  
-  pinMode(quick_save_button, INPUT);
-  pinMode(revert_quick_save_button, INPUT);
+    // Quick Saves
 
-  // Action Groups
+    pinMode(quick_save_button, INPUT);
+    pinMode(revert_quick_save_button, INPUT);
 
-  pinMode(action_1_button, INPUT);
-  pinMode(action_2_button, INPUT);
-  pinMode(action_3_button, INPUT);
-  pinMode(action_4_button, INPUT);
-  pinMode(action_5_button, INPUT);
-  pinMode(action_6_button, INPUT);
+    // Action Groups
+
+    pinMode(action_1_button, INPUT);
+    pinMode(action_2_button, INPUT);
+    pinMode(action_3_button, INPUT);
+    pinMode(action_4_button, INPUT);
+    pinMode(action_5_button, INPUT);
+    pinMode(action_6_button, INPUT);
 }
 
 void loop() {
-  // Debounce
-/* 1 */int brakesDigitalRead = digitalRead(gear_switch); // getting status of brakes switch we are using an integer variable but only two values are 
-// possible "HIGH" meaning true or activate and and "LOW" meaning false
-/* 2 */int lightDigitialRead = digitalRead(lights_switch)
-/* 3 */int gearDigitalRead = digitalRead(gear_switch)
-/* 4 */int sasDigitalRead = digitalRead(SAS_switch)
-/* 5 */int rcsDigitalRead = digitalRead(RCS_switch)
-/* 6 */int modDigitalRead = digitalRead(mod_switch)
-  button_state = digitalRead(stage_button);
+    // Debounce
+    /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // getting status of brakes switch we are using an integer variable but only two values are 
+    // possible "HIGH" meaning true or activate and and "LOW" meaning false
+    /* 2 */int lightDigitialRead = digitalRead(lights_switch)
+        /* 3 */int gearDigitalRead = digitalRead(gear_switch)
+        /* 4 */int sasDigitalRead = digitalRead(SAS_switch)
+        /* 5 */int rcsDigitalRead = digitalRead(RCS_switch)
+        /* 6 */int modDigitalRead = digitalRead(mod_switch)
+        button_state = digitalRead(stage_button);
 
-  if(button_state == HIGH){
-    delay(50);
-    button_state = digitalRead(stage_button);
-    if(button_state == LOW){
-      mySimpit.activateAction(STAGE_ACTION);
+    if (button_state == HIGH) {
+        delay(50);
+        button_state = digitalRead(stage_button);
+        if (button_state == LOW) {
+            mySimpit.activateAction(STAGE_ACTION);
+        }
     }
-  }
-  
-
-
-if(brakesDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(BRAKES_ACTION); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(BRAKES_ACTION);  //activating brakes
-}
-if(lightDigitialRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(LIGHT_ACTION); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(LIGHT_ACTION);  //activating brakes
-}
-if(gearDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(GEAR_ACTION); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(GEAR_ACTION );  //activating brakes
-}
-
-if(sasDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(SAS_ACTION); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(SAS_ACTION );  //activating brakes
-}
-
-if(rcsDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(RCS_ACTION); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(RCS_ACTION);  //activating brakes
-}
-
-
-//!!!!!!!!!!!!!!!!
-//IMPORTANT
-//Please insert your desired action in the /* Your action */ comment
-
-if(mod_switch == HIGH /* high is this case is erqual to a boolean 'true' */ ){
-  mySimpit.deactivateAction(/* Your action */); //deavtivating brakes
-}
-else /* checking if button is not active or "LOW" */ {
-  mySimpit.activateAction(/* Your action */);  //activating brakes
-}
-//IMPORTANT
-//!!!!!!!!!!!!!
 
 
 
+    if (brakesDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(BRAKES_ACTION); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(BRAKES_ACTION);  //activating brakes
+    }
+    if (lightDigitialRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(LIGHT_ACTION); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(LIGHT_ACTION);  //activating brakes
+    }
+    if (gearDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(GEAR_ACTION); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(GEAR_ACTION);  //activating brakes
+    }
+
+    if (sasDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(SAS_ACTION); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(SAS_ACTION);  //activating brakes
+    }
+
+    if (rcsDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(RCS_ACTION); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(RCS_ACTION);  //activating brakes
+    }
 
 
-  mySimpit.update();
+    //!!!!!!!!!!!!!!!!
+    //IMPORTANT
+    //Please insert your desired action in the /* Your action */ comment
+
+    if (mod_switch == HIGH /* high is this case is erqual to a boolean 'true' */) {
+        mySimpit.deactivateAction(/* Your action */); //deavtivating brakes
+    }
+    else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(/* Your action */);  //activating brakes
+    }
+    //IMPORTANT
+    //!!!!!!!!!!!!!
+
+
+
+
+
+    mySimpit.update();
 }

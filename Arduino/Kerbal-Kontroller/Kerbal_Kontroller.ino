@@ -1,7 +1,8 @@
 #include "KerbalSimpit.h"
 #include "KerbalSimpitMessageTypes.h"
 #include "PayloadStructs.h"
-
+#include <Keyboard.h>
+char ctrlKey = KEY_LEFT_CTRL;
 /*
 
 Varables to keep track of button state
@@ -290,6 +291,11 @@ void loop() {
     }
     //IMPORTANT
     //!!!!!!!!!!!!!
+
+
+
+// keypress emulation syntax   Keyboard.press(ctrlKey); Keyboard.press('n');
+
 
     mySimpit.update();
 }

@@ -90,6 +90,13 @@ it for your controller
 #define action_5_button 2
 #define action_6_button 2
 
+// Mod Buttons
+
+#define mod_1_button 2
+#define mod_2_button 2
+#define mod_3_button 2
+#define mod_4_button 2
+
 /*
 
 Analog Pins
@@ -175,19 +182,31 @@ void setup() {
 
 void loop() {
 
-    // Debounce
+    /*
 
-    stage_button_state = digitalRead(stage_button);
+    Debounce
 
-    if (button_state == HIGH) {
+    For all 22 buttons this is our debounce so that we make sure we get one button press
+
+
+    Normal 1 pin debounce
+
+    if(digitalRead(button) == HIGH){
         delay(50);
-        button_state = digitalRead(stage_button);
-        if (button_state == LOW) {
-            mySimpit.activateAction(STAGE_ACTION);
+
+        if(digitalRead(button) == LOW){
+            // Count press
         }
     }
 
-    // 
+    This debounce always loops and waits until the button is unpressed, the unpressed
+    only physicly happens once and that is why the wait is there for any debounce
+
+    So to account for having too many buttons and waiting for all of them would just cause
+    errors we made this program.
+
+
+    */
 
     stage_button_state = digitalRead(stage_button);
     
@@ -216,13 +235,16 @@ void loop() {
 
     if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
 
-    /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // getting status of brakes switch we are using an integer variable but only two values are 
+    if(roll_right_button_state == HIGH && digitalRead(roll_right_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
+    if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
+
+    /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // Getting status of brakes switch we are using an integer variable but only two values are 
     // possible "HIGH" meaning true or activate and and "LOW" meaning false
-    /* 2 */int lightDigitialRead = digitalRead(lights_switch)
-    /* 3 */int gearDigitalRead = digitalRead(gear_switch)
-    /* 4 */int sasDigitalRead = digitalRead(SAS_switch)
-    /* 5 */int rcsDigitalRead = digitalRead(RCS_switch)
-    /* 6 */int modDigitalRead = digitalRead(mod_switch)
+    /* 2 */int lightDigitialRead = digitalRead(lights_switch);
+    /* 3 */int gearDigitalRead = digitalRead(gear_switch);
+    /* 4 */int sasDigitalRead = digitalRead(SAS_switch);
+    /* 5 */int rcsDigitalRead = digitalRead(RCS_switch);
+    /* 6 */int modDigitalRead = digitalRead(mod_switch);
 
     if (brakesDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
         mySimpit.deactivateAction(BRAKES_ACTION); // deavtivating brakes
@@ -262,10 +284,9 @@ void loop() {
     // Please insert your desired action in the /* Your action */ comment
 
     if (mod_switch == HIGH /* high is this case is erqual to a boolean 'true' */) {
-        mySimpit.deactivateAction(/* Your action */); //deavtivating brakes
-    }
-    else /* checking if button is not active or "LOW" */ {
-        mySimpit.activateAction(/* Your action */);  //activating brakes
+        mySimpit.deactivateAction(ABORT_ACTION/* Your action */); //deavtivating brakes
+    } else /* checking if button is not active or "LOW" */ {
+        mySimpit.activateAction(ABORT_ACTION/* Your action */);  //activating brakes
     }
     //IMPORTANT
     //!!!!!!!!!!!!!

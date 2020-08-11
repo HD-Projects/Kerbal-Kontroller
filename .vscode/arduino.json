@@ -1,5 +1,6 @@
 {
     "board": "SparkFun:apollo3:amap3atp",
     "configuration": "svl_baud=921600,loader=sparkfun_svl",
-    "port": "COM4"
+    "port": "COM4",
+    "sketch": "Arduino\\Kerbal-Kontroller\\Kerbal_Kontroller.ino"
 }

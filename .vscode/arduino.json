@@ -1,0 +1,5 @@
+{
+    "board": "SparkFun:apollo3:amap3atp",
+    "configuration": "svl_baud=921600,loader=sparkfun_svl",
+    "port": "COM4"
+}

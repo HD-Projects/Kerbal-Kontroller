@@ -1,8 +1,10 @@
+// FILE: Kerbal_Kontroller_Verbose.ino
+
 #include "KerbalSimpit.h"
 #include "KerbalSimpitMessageTypes.h"
 #include "PayloadStructs.h"
-#include "Keyboard.h"
-char ctrlKey = KEY_LEFT_CTRL;
+//#include "Keyboard.h"
+//char ctrlKey = KEY_LEFT_CTRL;
 
 // Kerbal Simpit rotation message
 
@@ -188,60 +190,35 @@ void setup() {
 
 void loop() {
 
-    /*
+    // Debounce
 
-    Debounce
+    // im smart
 
-    For all 22 buttons this is our debounce so that we make sure we get one button press
+    if(digitalRead(stage_button) == HIGH){
+        // Delay 50 for hardware Debounce
 
-
-    Normal 1 pin debounce
-
-    if(digitalRead(button) == HIGH){
         delay(50);
+        
+        if(digitalRead(stage_button) == LOW){
+            // Button Press Counted
 
-        if(digitalRead(button) == LOW){
-            // Count press
+            mySimpit.activateAction(STAGE_ACTION);
         }
     }
 
-    This debounce always loops and waits until the button is unpressed, the unpressed
-    only physicly happens once and that is why the wait is there for any debounce
+    if(digitalRead(roll_right_button) == HIGH){
+        // Delay 50 for hardware Debounce
 
-    So to account for having too many buttons and waiting for all of them would just cause
-    errors we made this program. This program checks all pins before then after.
+        delay(50);
+        
+        if(digitalRead(roll_right_button) == LOW){
+            // Button Press Counted
 
-    */
+            
+        }
+    }
 
-    stage_button_state = digitalRead(stage_button);
     
-    roll_right_button_state = digitalRead(roll_right_button);
-    roll_left_button_state = digitalRead(roll_left_button);
-    pitch_left_button_state = digitalRead(pitch_left_button);
-    pitch_right_button_state = digitalRead(pitch_right_button);
-    yaw_up_button_state = digitalRead(yaw_up_button);
-    yaw_down_button_state = digitalRead(yaw_down_button);
-
-    WTM_button_state = digitalRead(WTM_button);
-    warp_up_button_state = digitalRead(warp_up_button);
-    warp_down_button_state = digitalRead(warp_down_button);
-
-    quick_save_button_state = digitalRead(quick_save_button);
-    revert_quick_save_button_state = digitalRead(revert_quick_save_button);
-
-    action_1_button_state = digitalRead(action_1_button);
-    action_2_button_state = digitalRead(action_2_button);
-    action_3_button_state = digitalRead(action_3_button);
-    action_4_button_state = digitalRead(action_4_button);
-    action_5_button_state = digitalRead(action_5_button);
-    action_6_button_state = digitalRead(action_6_button);
-
-    delay(50);
-
-    if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
-
-    if(roll_right_button_state == HIGH && digitalRead(roll_right_button) == LOW){}
-    if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){}
 
     /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // Getting status of brakes switch we are using an integer variable but only two values are 
     // possible "HIGH" meaning true or activate and and "LOW" meaning false

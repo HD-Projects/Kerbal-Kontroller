@@ -1,8 +1,13 @@
 #include "KerbalSimpit.h"
 #include "KerbalSimpitMessageTypes.h"
 #include "PayloadStructs.h"
-#include <Keyboard.h>
+#include "Keyboard.h"
 char ctrlKey = KEY_LEFT_CTRL;
+
+// Kerbal Simpit rotation message
+
+rotationMessage rotationMsg;
+
 /*
 
 Varables to keep track of button state
@@ -204,8 +209,7 @@ void loop() {
     only physicly happens once and that is why the wait is there for any debounce
 
     So to account for having too many buttons and waiting for all of them would just cause
-    errors we made this program.
-
+    errors we made this program. This program checks all pins before then after.
 
     */
 
@@ -236,8 +240,8 @@ void loop() {
 
     if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
 
-    if(roll_right_button_state == HIGH && digitalRead(roll_right_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
-    if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){mySimpit.activateAction(STAGE_ACTION);}
+    if(roll_right_button_state == HIGH && digitalRead(roll_right_button) == LOW){}
+    if(stage_button_state == HIGH && digitalRead(stage_button) == LOW){}
 
     /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // Getting status of brakes switch we are using an integer variable but only two values are 
     // possible "HIGH" meaning true or activate and and "LOW" meaning false

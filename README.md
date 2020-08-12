@@ -1,6 +1,6 @@
 # Kerbal Kontroller
 
-This is a external controller for the game Kerbal Space Program you need a [Artemis ATP](https://www.sparkfun.com/products/15442), [Artemis Module](https://www.sparkfun.com/products/15484), or any other board with ~30 digital interupts(Why did we write the code like this, hope to get Arduino Mega suport soon). 
+This is a external controller for the game Kerbal Space Program you need a [Artemis ATP](https://www.sparkfun.com/products/15442), [Artemis Module](https://www.sparkfun.com/products/15484), or any other board with 30+ digital pins.
 
 # Table of Contents
 

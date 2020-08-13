@@ -29,7 +29,7 @@ void setup() {
 }
 
 void loop() {
-    rotationMsg.roll = constrain(map(1023,1023,512,-32767,0),-32767,0);
+    rotationMsg.roll = ;
 
     mySimpit.send(ROTATION_MESSAGE, rotationMsg);
 

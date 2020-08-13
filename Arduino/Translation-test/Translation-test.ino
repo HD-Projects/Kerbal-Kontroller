@@ -29,9 +29,9 @@ void setup() {
 }
 
 void loop() {
-    wh.throttle = 32767;
+    rotationMsg.roll = constrain(map(1023,1023,512,-32767,0),-32767,0);
 
-    mySimpit.send(WHEEL_MESSAGE, wh);
+    mySimpit.send(ROTATION_MESSAGE, rotationMsg);
 
     mySimpit.update();
 }

@@ -206,11 +206,11 @@ void loop() {
         }
     }
 
-    if(digitalRead(roll_right_button) == HIGH){
+    if(digitalRead(roll_right_button) == HIGH){                      
         // Delay 50 for hardware Debounce
 
         delay(50);
-        
+    
         if(digitalRead(roll_right_button) == LOW){
             // Button Press Counted
 

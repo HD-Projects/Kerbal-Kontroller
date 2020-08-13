@@ -29,7 +29,9 @@ void setup() {
 }
 
 void loop() {
-    rotationMsg.roll = ;
+    rotationMsg.pitch = 32000;
+
+    delay(200);
 
     mySimpit.send(ROTATION_MESSAGE, rotationMsg);
 

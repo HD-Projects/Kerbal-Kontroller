@@ -6,6 +6,23 @@
 //#include "Keyboard.h"
 //char ctrlKey = KEY_LEFT_CTRL;
 
+// Defining limits
+
+// Throttle
+
+#define THROTTLE_HIGH 0
+#define THROTTLE_LOW -32768
+
+// Rotation Messages
+
+#define ROTATION_HIGH 32767
+#define ROTATION_LOW -32768
+
+// Translation Messages
+
+#define TRANSLATION_HIGH 32767
+#define TRANSLATION_LOW -32768
+
 // Kerbal Simpit rotation message
 
 rotationMessage rotationMsg;

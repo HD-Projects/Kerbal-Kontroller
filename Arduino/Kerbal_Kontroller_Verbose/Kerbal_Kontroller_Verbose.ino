@@ -10,8 +10,8 @@
 
 // Throttle
 
-#define THROTTLE_HIGH 0
-#define THROTTLE_LOW -32768
+#define THROTTLE_HIGH -32768
+#define THROTTLE_LOW 0
 
 // Rotation Messages
 

@@ -8,6 +8,8 @@ rotationMessage rotationMsg;
 
 KerbalSimpit mySimpit(Serial);
 
+int throttleValue;
+
 void simpitSetup(int pin) {
     Serial.begin(115200);
 
@@ -34,6 +36,9 @@ void loop() {
     rotationMsg.pitch = 20000;
 
     mySimpit.send(ROTATION_MESSAGE, rotationMsg);
+
+    throttleValue = 32767; 
+    mySimpit.send(THROTTLE_MESSAGE, (unsigned char*) &throttleValue, 2);
 
     mySimpit.update();
 }

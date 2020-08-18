@@ -2,18 +2,18 @@
 #include "KerbalSimpitMessageTypes.h"
 #include "PayloadStructs.h"
 
-wheelMessage wh;
-
-rotationMessage rotationMsg; 
+rotationMessage myRotation; 
 
 KerbalSimpit mySimpit(Serial);
 
 int throttleValue;
 
-void simpitSetup(int pin) {
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+
     Serial.begin(115200);
 
-    digitalWrite(pin, HIGH);
+    digitalWrite(LED_BUILTIN, HIGH);
 
     // This loop continually attempts to handshake with the plugin.
     // It will keep retrying until it gets a successful handshake.
@@ -21,24 +21,27 @@ void simpitSetup(int pin) {
         delay(100);
     }
     // Turn off the built-in LED to indicate handshaking is complete.
-    digitalWrite(pin, LOW);
-}
-
-void setup() {
-    pinMode(LED_BUILTIN, OUTPUT);
-
-    simpitSetup(LED_BUILTIN);
+    digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop() {
-    rotationMsg.roll = 0;
-    rotationMsg.yaw = 0;
-    rotationMsg.pitch = 20000;
+    myRotation.mask = 1|2|4;
 
-    mySimpit.send(ROTATION_MESSAGE, rotationMsg);
+    myRotation.pitch = 0;
 
-    throttleValue = 32767; 
-    mySimpit.send(THROTTLE_MESSAGE, (unsigned char*) &throttleValue, 2);
+    myRotation.roll = 0; // applies the X-axis value as the rotation roll value
+
+    myRotation.yaw = 0;
+
+    mySimpit.send(ROTATION_MESSAGE, myRotation);
+
+    delay(1);
+
+    throttleValue = 32767;
+
+    mySimpit.send(THROTTLE_MESSAGE, throttleValue);
+
+    delay(1);
 
     mySimpit.update();
 }

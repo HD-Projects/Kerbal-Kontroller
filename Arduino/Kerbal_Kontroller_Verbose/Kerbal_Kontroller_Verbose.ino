@@ -8,6 +8,10 @@
 
 // Defining limits
 
+//Dead Zone
+
+#define DEADZONE 200
+
 // Throttle
 
 #define THROTTLE_HIGH -32768
@@ -26,35 +30,6 @@
 // Kerbal Simpit rotation message
 
 rotationMessage rotationMsg;
-
-/*
-
-Varables to keep track of button state
-
-*/
-
-int stage_button_state = 0;
-
-int roll_right_button_state = 0;
-int roll_left_button_state = 0;
-int pitch_left_button_state = 0;
-int pitch_right_button_state = 0;
-int yaw_up_button_state = 0;
-int yaw_down_button_state = 0;
-
-int WTM_button_state = 0;
-int warp_up_button_state = 0;
-int warp_down_button_state = 0;
-
-int quick_save_button_state = 0;
-int revert_quick_save_button_state = 0;
-
-int action_1_button_state = 0;
-int action_2_button_state = 0;
-int action_3_button_state = 0;
-int action_4_button_state = 0;
-int action_5_button_state = 0;
-int action_6_button_state = 0;
 
 /*
 
@@ -206,11 +181,13 @@ void setup() {
 }
 
 void loop() {
+    mySimpit.update();
 
     // Debounce
 
     // im smart
 
+    // Stage
     if(digitalRead(stage_button) == HIGH){
         // Delay 50 for hardware Debounce
 
@@ -223,27 +200,309 @@ void loop() {
         }
     }
 
-    if(digitalRead(roll_right_button) == HIGH){                      
+    // IDK if Kerbal Simpit supports Warping yet
+
+    if(digitalRead(WTM_button) == HIGH){
         // Delay 50 for hardware Debounce
 
         delay(50);
-    
-        if(digitalRead(roll_right_button) == LOW){
+        
+        if(digitalRead(WTM_button) == LOW){
             // Button Press Counted
 
-            
+            // IDK
+        }
+    } 
+
+    // Time warp up
+
+    if(digitalRead(warp_up_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(warp_up_button) == LOW){
+            // Button Press Counted
+
+            // press(".")
+        }
+    } 
+
+    // Time warp down
+
+    if(digitalRead(warp_down_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(warp_down_button) == LOW){
+            // Button Press Counted
+
+            // press(",")
+        }
+    } 
+
+    // Press button to quick save
+
+    if(digitalRead(quick_save_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(quick_save_button) == LOW){
+            // Button Press Counted
+
+            // press(F5)
         }
     }
 
+    // Press button to revert
+
+    if(digitalRead(revert_quick_save_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(revert_quick_save_button) == LOW){
+            // Button Press Counted
+
+            // press(F9) & hold
+        }
+    }
+
+    // Action group 1
+
+    if(digitalRead(action_1_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_1_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(1);
+        }
+    }
+
+    // Action group 2
+
+    if(digitalRead(action_2_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_2_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(2);
+        }
+    }
+
+    // Action group 3
+
+    if(digitalRead(action_3_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_3_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(3);
+        }
+    }
+
+    // Action group 4
+
+    if(digitalRead(action_4_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_4_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(4);
+        }
+    }
+
+    // Action group 5
+
+    if(digitalRead(action_5_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_5_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(5);
+        }
+    }
+
+    // Action group 6
+
+    if(digitalRead(action_6_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(action_6_button) == LOW){
+            // Button Press Counted
+
+            mySimpit.toggleCAG(6);
+        }
+    }
+
+    /* 
+
+    Mod buttons
+
+    The mod buttons have 2 choices debounce or constaint
+    like the control buttons the below code is the debounce
+    put a close tag below, customize the action and brake the close tag
+    
     
 
-    /* 1 */int brakesDigitalRead = digitalRead(gear_switch); // Getting status of brakes switch we are using an integer variable but only two values are 
+    // Mod 1
+
+    if(digitalRead(mod_1_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(mod_1_button) == LOW){
+            // Button Press Counted
+
+            // Your Action
+        }
+    }
+
+    // Mod 1
+
+    if(digitalRead(mod_2_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(mod_2_button) == LOW){
+            // Button Press Counted
+
+            // Your Action
+        }
+    }
+
+    // Mod 3
+
+    if(digitalRead(mod_3_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(mod_3_button) == LOW){
+            // Button Press Counted
+
+            // Your Action
+        }
+    }
+
+    // Mod 1
+
+    if(digitalRead(mod_4_button) == HIGH){
+        // Delay 50 for hardware Debounce
+
+        delay(50);
+        
+        if(digitalRead(mod_4_button) == LOW){
+            // Button Press Counted
+
+            // Your Action
+        }
+    }
+
+    */
+
+    /*
+
+    Second option
+
+    Press down for cuntinuous action
+
+    
+
+    // Mod 1
+
+    if(digitalRead(mod_1_button)){
+        // Your Action
+    }
+
+    // Mod 2
+
+    if(digitalRead(mod_2_button)){
+        // Your Action
+    }
+
+    // Mod 3
+
+    if(digitalRead(mod_3_button)){
+        // Your Action
+    }
+
+    // Mod 4
+
+    if(digitalRead(mod_4_button)){
+        // Your Action
+    }
+
+    */
+
+    // Set up rotation masking to know what to send
+
+    rotationMsg.mask = 1|2|4;
+
+    // Set roll
+
+    if(digitalRead(roll_right_button)){
+        // Set rotaion message roll
+        rotationMsg.roll = 32767;
+    }
+    if(digitalRead(roll_left_button)){
+        // Set rotaion message roll
+        rotationMsg.roll = -32768;
+    }
+
+    // Set pitch
+
+    if(digitalRead(pitch_left_button)){
+        // Set rotaion message pitch
+        rotationMsg.pitch = 32767;
+    }
+    if(digitalRead(pitch_right_button)){
+        // Set rotaion message pitch
+        rotationMsg.pitch = -32768;
+    }
+
+    // Set yaw
+
+    if(digitalRead(yaw_up_button)){
+        // Set rotaion message yaw
+        rotationMsg.pitch = 32767;
+    }
+    if(digitalRead(yaw_down_button)){
+        // Set rotaion message yaw
+        rotationMsg.pitch = -32768;
+    }
+
+    // Send rotationMsg to the Kerbal Simpit plugin
+    mySimpit.send(ROTATION_MESSAGE, rotationMsg);
+
+    int brakesDigitalRead = digitalRead(gear_switch); // 1 Getting status of brakes switch we are using an integer variable but only two values are 
     // possible "HIGH" meaning true or activate and and "LOW" meaning false
-    /* 2 */int lightDigitialRead = digitalRead(lights_switch);
-    /* 3 */int gearDigitalRead = digitalRead(gear_switch);
-    /* 4 */int sasDigitalRead = digitalRead(SAS_switch);
-    /* 5 */int rcsDigitalRead = digitalRead(RCS_switch);
-    /* 6 */int modDigitalRead = digitalRead(mod_switch);
+    int lightDigitialRead = digitalRead(lights_switch); // 2
+    int gearDigitalRead = digitalRead(gear_switch); // 3
+    int sasDigitalRead = digitalRead(SAS_switch); // 4
+    int rcsDigitalRead = digitalRead(RCS_switch); // 5
+    int modDigitalRead = digitalRead(mod_switch); // 6
 
     if (brakesDigitalRead == HIGH /* high is this case is erqual to a boolean 'true' */) {
         mySimpit.deactivateAction(BRAKES_ACTION); // deavtivating brakes
@@ -290,10 +549,5 @@ void loop() {
     //IMPORTANT
     //!!!!!!!!!!!!!
 
-
-
-// keypress emulation syntax   Keyboard.press(ctrlKey); Keyboard.press('n');
-
-
-    mySimpit.update();
+    // keypress emulation syntax   Keyboard.press(ctrlKey); Keyboard.press('n');
 }

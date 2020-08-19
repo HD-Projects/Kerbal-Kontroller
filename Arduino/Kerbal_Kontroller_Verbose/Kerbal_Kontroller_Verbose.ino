@@ -224,7 +224,7 @@ void loop() {
         if(digitalRead(warp_up_button) == LOW){
             // Button Press Counted
 
-            // press(".")
+            // press(".")  no timewarp on Artemis ATP
         }
     } 
 
@@ -238,7 +238,7 @@ void loop() {
         if(digitalRead(warp_down_button) == LOW){
             // Button Press Counted
 
-            // press(",")
+            // press(",")  no timewarp on Artemis ATP
         }
     } 
 
@@ -252,7 +252,7 @@ void loop() {
         if(digitalRead(quick_save_button) == LOW){
             // Button Press Counted
 
-            // press(F5)
+            // press(F5)  no timewarp on Artemis ATP
         }
     }
 
@@ -266,7 +266,7 @@ void loop() {
         if(digitalRead(revert_quick_save_button) == LOW){
             // Button Press Counted
 
-            // press(F9) & hold
+            // press(F9) & hold no timewarp on Artemis ATP
         }
     }
 

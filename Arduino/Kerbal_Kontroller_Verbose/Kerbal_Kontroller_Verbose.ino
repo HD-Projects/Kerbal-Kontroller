@@ -3,8 +3,6 @@
 #include "KerbalSimpit.h"
 #include "KerbalSimpitMessageTypes.h"
 #include "PayloadStructs.h"
-// we need more keyboard emulation 
-//char ctrlKey = KEY_LEFT_CTRL;
 
 // Defining limits
 

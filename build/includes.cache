@@ -1,0 +1,37 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "C:\\Users\\adick\\AppData\\Local\\Arduino15\\packages\\SparkFun\\hardware\\apollo3\\1.1.2\\cores\\arduino"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "C:\\Users\\adick\\AppData\\Local\\Arduino15\\packages\\SparkFun\\hardware\\apollo3\\1.1.2\\variants\\redboard_artemis_atp"
+  },
+  {
+    "Sourcefile": "c:\\Users\\adick\\Documents\\Kerbal Kontroller\\build\\sketch\\Kerbal_Kontroller_Verbose.ino.cpp",
+    "Include": "KerbalSimpit.h",
+    "Includepath": "C:\\Users\\adick\\Documents\\Arduino\\libraries\\Kerbal_Sim_Pit\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\adick\\Documents\\Kerbal Kontroller\\build\\sketch\\Kerbal_Kontroller_Verbose.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\adick\\Documents\\Arduino\\libraries\\Kerbal_Sim_Pit\\src\\Helpers.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\adick\\Documents\\Arduino\\libraries\\Kerbal_Sim_Pit\\src\\KerbalSimpit.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "C:\\Users\\adick\\Documents\\Arduino\\libraries\\Kerbal_Sim_Pit\\src\\PayloadStructs.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

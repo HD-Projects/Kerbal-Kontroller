@@ -6,6 +6,7 @@
                 "ARDUINO=10800"
             ],
             "includePath": [
+                "C:\\Program Files (x86)\\Arduino\\libraries\\Keyboard\\src",
                 "${workspaceRoot}",
                 "C:\\Users\\adick\\AppData\\Local\\Arduino15\\packages\\SparkFun\\hardware\\apollo3\\1.1.2\\**",
                 "C:\\Users\\adick\\AppData\\Local\\Arduino15\\packages\\SparkFun\\tools\\**",

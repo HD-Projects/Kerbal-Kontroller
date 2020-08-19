@@ -38,15 +38,15 @@ settings if you are following our directions
 
 // SAS + RCS + Mod
 
-#define SAS_switch 2
-#define RCS_switch 2 // The-Bit-One(Or u/hogthardwarf) will never have this switch on
-#define mod_switch 2
+#define SAS_switch 6
+#define RCS_switch 7 // The-Bit-One(Or u/hogthardwarf) will never have this switch on
+#define mod_switch 8
 
 // Built in Action Groups
 
-#define lights_switch 2
-#define brakes_switch 2
-#define gear_switch 2
+#define lights_switch 9
+#define brakes_switch 10
+#define gear_switch 11
 
 /*
 
@@ -60,12 +60,12 @@ it for your controller
 
 // Controls
 
-#define roll_right_button 2
-#define roll_left_button 2
-#define pitch_left_button 2
-#define pitch_right_button 2
-#define yaw_up_button 2
-#define yaw_down_button 2
+#define roll_right_button 12
+#define roll_left_button 13
+#define pitch_left_button 14
+#define pitch_right_button 15
+#define yaw_up_button 16
+#define yaw_down_button 17
 
 // Warp button
 
@@ -81,19 +81,19 @@ it for your controller
 
 // Action Groups
 
-#define action_1_button 2
-#define action_2_button 2
+#define action_1_button 0
+#define action_2_button 1
 #define action_3_button 2
-#define action_4_button 2
-#define action_5_button 2
-#define action_6_button 2
+#define action_4_button 3
+#define action_5_button 4
+#define action_6_button 5
 
 // Mod Buttons
 
-#define mod_1_button 2
-#define mod_2_button 2
-#define mod_3_button 2
-#define mod_4_button 2
+#define mod_1_button 18
+#define mod_2_button 19
+#define mod_3_button 20
+#define mod_4_button 21
 
 /*
 

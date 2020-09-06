@@ -2,5 +2,6 @@
     "board": "SparkFun:apollo3:amap3atp",
     "configuration": "svl_baud=921600,loader=sparkfun_svl",
     "port": "COM4",
+    "output": "../build",
     "sketch": "Arduino\\Kerbal_Kontroller_Verbose\\Kerbal_Kontroller_Verbose.ino"
 }

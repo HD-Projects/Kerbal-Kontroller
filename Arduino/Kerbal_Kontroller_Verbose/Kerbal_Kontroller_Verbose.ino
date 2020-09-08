@@ -183,8 +183,6 @@ void loop() {
 
     // Debounce
 
-    // im smart
-
     // Stage
     if(digitalRead(stage_button) == HIGH){
         // Delay 50 for hardware Debounce

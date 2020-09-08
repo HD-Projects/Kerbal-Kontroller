@@ -1,5 +1,8 @@
 # Kerbal Kontroller
 
+[![CodeFactor](https://www.codefactor.io/repository/github/hd-projects/kerbal-kontroller/badge)](https://www.codefactor.io/repository/github/hd-projects/kerbal-kontroller)
+[![Gitter](https://badges.gitter.im/HD-Projects/community.svg)](https://gitter.im/HD-Projects/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 This is a external controller for the game Kerbal Space Program you need a [Artemis ATP](https://www.sparkfun.com/products/15442), [Artemis Module](https://www.sparkfun.com/products/15484), or any other board with 30+ digital pins.
 
 # Table of Contents
